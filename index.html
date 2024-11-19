@@ -41,7 +41,8 @@
 	</header>
     <main>
 	 <header><h3>A JavaScript Project by Nyrelle Vital</h3></header>
-	 <h3 id="my-greeting"> Greeting goes here</h3>
+	 <h3 id="my-greeting"> Greeting goes here!</h3>
+	 <p id ="my-day">Day of the week goes here!</p>
 	    <p>This webpage changes its greeting, background color, and image based on the time of day!</p>
 		<p>Using JavaScript, it checks the current hour to figure out if it's morning (5am-12pm), afternoon (12pm-6pm), or night (6pm-5am).</p>
 		<p>Depending on the time, it shows a matching greeting, changes the background to a fitting color, and updates the image to match the time.</p>
@@ -91,6 +92,11 @@ if(myHour >= 5 && myHour < 12){
 document.getElementById("my-greeting").innerHTML = mySentence;
 document.body.style.backgroundColor = myColor;
 document.getElementById("my-pic").src = myPic;
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const currentDay = daysOfWeek[myDate.getDay()];
+
+document.getElementById("my-day").innerHTML = `Today is ${currentDay}!`;
 
     document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
     document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
